@@ -1,0 +1,21 @@
+.login {
+    margin-top: 40px;
+}
+
+.social-button {
+    width: 60px;
+    background: white;
+    padding: 8px;
+    border-radius: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    outline: 0;
+    border: 0;
+}
+
+.social-button:active {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.social-button img {
+    width: 100%;
+}

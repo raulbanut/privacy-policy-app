@@ -1,0 +1,36 @@
+.puncte-lista {
+  margin-top: 0px;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+
+li {
+  margin-top: 0.6rem;
+}
+
+textarea {
+  width: 100%;
+  background: #1f2d40;
+  resize: none;
+  color: azure;
+}
+
+textarea:focus {
+  box-shadow: none;
+  border: 0px #1f2d40;
+}
+
+img {
+  max-width: 100%;
+  filter: brightness(2);
+}
+.home {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.section-content {
+  background: #1f2d40;
+  color: hsla(0, 0%, 100%, 0.87);
+  padding: 0 1.5rem 1rem 1.5rem;
+}
