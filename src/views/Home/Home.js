@@ -1,6 +1,8 @@
 import firebase from "firebase";
 import { db } from "../../main";
-import store from "../../store";
+// import store from "../../store";
+import Editor from 'primevue/editor';
+
 /* eslint-disable */
 
 export default {
@@ -8,11 +10,22 @@ export default {
 
     data() {
         return {
-            messageFromTextArea: "",
+            value: `
+                <h1 class="section-header">Privacy Notice</h1>
+                <h3 class="section-title">Who we are</h3>
+                <p class="section-content">ACCESA IT Systems SRL, Accesa IT Consulting and Ratiodata Romania SRL (referred to as “we”, “us”) are Romanian companies managing software projects, including development, implementation and support.</p>
+                <h3 class="section-title">What personal data we process</h3>
+                <p class="section-content">
+                We are personal data controllers. We collect the following types of personal data from you:
+                <ul>
+                <li>Name, surname</li>
+                <li>Email</li>
+                <li>Phone (optional)</li>
+                </ul>
+                </p>
+                `,
 
-            counterSectiuni: 0,
-
-            listItems: [{ message: "Hello", createdAt: "" }],
+            // counterSectiuni: 0,
 
             sectiuni: [],
 
@@ -28,7 +41,6 @@ export default {
                 createdAt: "",
             },
 
-            stateParagraph: false,
             stateAdd: false,
         };
     },
@@ -88,7 +100,9 @@ export default {
         //   this.sectiune = sectiune;
         // });
     },
-
+    components: {
+        Editor
+    },
     methods: {
         logout: function () {
             firebase
@@ -104,6 +118,10 @@ export default {
                 console.log(text);
                 this.messageFromTextArea = "";
             }
+        },
+
+        updateParagraph(message) {
+            this.sectiune.paragraph = message;
         },
 
         saveData() {
@@ -131,21 +149,21 @@ export default {
                 });
         },
 
-        addNewItemsToList(id) {
-            this.testCollection.push(this.obiect.message);
-            // this.testCollection.push({key: id,message:this.obiect.message});
-            console.log(id);
-            this.obiect.createdAt = new Date();
-            db.collection("/subsection/paragraphs/" + id + "/list-items/")
-                .add(this.obiect)
+        saveMessageFromEditor(inputMessage) {
+            const object = {
+                message: ""
+            }
+
+            object.message = JSON.stringify(inputMessage);
+
+            db.collection("editor")
+                .add(object)
                 .then(function (docRef) {
                     console.log("Document written with ID: ", docRef.id);
                 })
                 .catch(function (err) {
                     console.error("Error adding document: ", err);
                 });
-            this.obiect.message = "";
-            this.obiect.createdAt = "";
         },
 
         deleted: function (message) {

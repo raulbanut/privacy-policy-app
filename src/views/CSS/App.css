@@ -76,7 +76,7 @@ a:hover {
 button {
   display: inline-block;
   text-align: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   width: auto;
   cursor: pointer;
   vertical-align: middle;

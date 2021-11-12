@@ -8,7 +8,6 @@ import store from './store'
 import PrimeVue from 'primevue/config'
 import Dialog from 'primevue/dialog';
 
-
 require('firebase/firestore');
 
 Vue.config.productionTip = false;

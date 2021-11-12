@@ -34,3 +34,10 @@ img {
   color: hsla(0, 0%, 100%, 0.87);
   padding: 0 1.5rem 1rem 1.5rem;
 }
+
+.editor {
+  text-align: left;
+  color:black;
+  background-color: white;
+  /* margin-top: 0px; */
+}
