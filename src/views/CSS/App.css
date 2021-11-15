@@ -67,6 +67,18 @@ a:hover {
   color: #00c2ff;
 }
 
+h1 {
+  text-align: center;
+  margin: 1em 0;
+  color: #00c2ff;
+}
+
+h3 {
+  text-align: center;
+  margin: 1em 0;
+  color: #00c2ff;
+}
+
 .section-content {
   background: #1f2d40;
   color: hsla(0, 0%, 100%, 0.87);
@@ -142,4 +154,13 @@ ul {
 li {
   display: list-item;
   text-align: -webkit-match-parent;
+}
+
+.home {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.logo {
+  filter: brightness(2);
 }

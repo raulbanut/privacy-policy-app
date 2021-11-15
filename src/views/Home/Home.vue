@@ -3,9 +3,10 @@
     <img alt="Accesa logo" src="../../assets/logo.png" />
     <p></p>
     <button @click="logout">Logout</button>
+
     <!-- <div class="section-header">Privacy Notice</div> -->
 
-      <!-- <div class="section">
+    <!-- <div class="section">
       <div class="section-title">{{ sectiune.title }}</div>
       <div class="section-content">
         <button @click="stateAdd = !stateAdd" style="margin-right: 0.3rem">
@@ -44,22 +45,37 @@
     </div> -->
 
     <div>
-      <div v-html="value" style="margin:30px"/>
+      <div v-html="value2" style="margin: 30px" />
 
       <!-- <div style="margin:30px">
           {{JSON.stringify(value)}}
       </div> -->
 
+      <button @click="addTemplate()" style="margin-bottom: 10px">
+        Add template
+      </button>
+      <button
+        @click="deleteContent()"
+        style="margin-bottom: 10px; margin-left: 0.2rem"
+      >
+        Delete content
+      </button>
+
       <div>
         <Editor
-        class="editor"
-        v-model="value"
-        editorStyle="height: 320px"
-        style="margin-top: 0px"
-      >
-      </Editor>
+          class="editor"
+          v-model="value"
+          editorStyle="height: 320px"
+          style="margin-top: 0px"
+        >
+        </Editor>
+        <!-- <Editor
+          v-model="value"
+          toolbar="minimal"
+        ></Editor> -->
       </div>
-      <div style="margin-top:10px">
+
+      <div style="margin-top: 10px">
         <button @click="saveMessageFromEditor(value)">
           Save Text from Editor
         </button>
@@ -70,4 +86,4 @@
 
 <script lang="js" src="./Home.js"/>
 
-<style scoped lang="css" src="./Home.css"/>
+<style scoped lang="css" src="./Home.css"></style>
