@@ -5,6 +5,9 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
+    /**
+     * 
+     */
     loggedIn: false,
     counter: 0,
   },
@@ -35,5 +38,3 @@ const store = new Vuex.Store({
 });
 
 export default store;
-
-

@@ -2,25 +2,34 @@ import firebase from "firebase";
 import { db } from "../../main";
 import store from "../../store";
 
-import Editor from 'primevue/editor';
+import { VueEditor } from 'vue2-quill-editor'
 
 /* eslint-disable */
 
 export default {
     name: "Home",
 
+    components: {
+        // Editor,
+        VueEditor,
+    },
+
     data() {
         return {
             statusTemplate: false,
-
             template: "",
+
+            apply:'',
+
             value: "",
             content: "",
 
-            // customToolbar: [
-            //     ['bold','italic','underline'],
-            //     [{ 'list': 'ordered'}, {'list': 'bullet'}]
-            // ]
+            customToolbar: [
+                ['bold', 'italic', 'underline'],
+                [{'list':'bullet'}],
+                [{ 'header': [1, 3, false] }],
+                ['link']
+            ],
         };
     },
 
@@ -46,9 +55,7 @@ export default {
             });
 
     },
-    components: {
-        Editor
-    },
+
 
     computed: {
         logState: function () {
@@ -64,13 +71,17 @@ export default {
                 .then(() => {
                     store.commit("logout");
                     store.commit("increaseCounter", -1);
-                    this.$router.replace("login");
+                    this.$router.replace("home");
                 });
         },
 
         addTemplate() {
             this.statusTemplate = true;
             this.value = this.template;
+        },
+
+        editContent() {
+            this.value = this.content;
         },
 
         deleteContent() {

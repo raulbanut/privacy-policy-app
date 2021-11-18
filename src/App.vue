@@ -7,5 +7,5 @@
 <script>
 </script>
 
-<style lang="css" src="./views/CSS/App.css">
+<style lang="css" src="../src/App.css">
 </style>
