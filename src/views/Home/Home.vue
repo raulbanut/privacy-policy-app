@@ -1,55 +1,18 @@
 <template>
   <div class="home">
-    <img alt="Accesa logo" src="../../assets/logo.png" />
-    <p></p>
-    <button @click="logout">Logout</button>
+    <button style="background-color: #1f2d40">
+      <router-link to="/login"
+        ><img class="logo" alt="Accesa logo" src="../../assets/logo.png"
+      /></router-link>
+    </button>
 
-    <!-- <div class="section-header">Privacy Notice</div> -->
+    <!-- <img alt="Accesa logo" src="../../assets/logo.png" /> -->
+    <!-- <p></p> -->
 
-    <!-- <div class="section">
-      <div class="section-title">{{ sectiune.title }}</div>
-      <div class="section-content">
-        <button @click="stateAdd = !stateAdd" style="margin-right: 0.3rem">
-          Add items to the list
-        </button>
+    <div class="logat" v-if="logState">
+      <button @click="logout">Logout</button>
 
-        <p>{{ sectiune.paragraph }}</p>
-
-        <div v-if="stateAdd">
-          <div>
-            <input type="text" placeholder="Mesaj" v-model="obiect.message" />
-            <button
-              @click="saveData()"
-              style="margin: auto; margin-left: 0.7rem"
-            >
-              Save
-            </button>
-          </div>
-        </div>
-
-        <ul>
-          <li :key="item.message" v-for="(item, idx) in sectiune.list">
-            {{ item.message }}
-            <button
-              class="puncte-lista"
-              @click="
-                deleted(item.message);
-                sectiune.list.splice(idx, 1);
-              "
-            >
-              Delete
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div> -->
-
-    <div>
-      <div v-html="value2" style="margin: 30px" />
-
-      <!-- <div style="margin:30px">
-          {{JSON.stringify(value)}}
-      </div> -->
+      <div v-html="value" style="margin: 30px" />
 
       <button @click="addTemplate()" style="margin-bottom: 10px">
         Add template
@@ -67,8 +30,7 @@
           v-model="value"
           editorStyle="height: 320px"
           style="margin-top: 0px"
-        >
-        </Editor>
+        />
         <!-- <Editor
           v-model="value"
           toolbar="minimal"
@@ -80,6 +42,10 @@
           Save Text from Editor
         </button>
       </div>
+    </div>
+
+    <div v-if="!logState">
+      <div v-html="content"></div>
     </div>
   </div>
 </template>

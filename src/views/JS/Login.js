@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import store from "../../store";
 
 export default {
     name: "login",
@@ -27,6 +28,8 @@ export default {
             const provider = new firebase.auth.GoogleAuthProvider();
 
             firebase.auth().signInWithPopup(provider).then((result) => {
+                store.commit("login");
+                store.commit("increaseCounter",1);
                 this.$router.replace('home');
             }).catch((err) => {
                 alert("Ooops. " + err.message)

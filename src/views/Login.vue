@@ -14,10 +14,6 @@
       You don't have an account? You can
       <router-link to="/sign-up"> create one</router-link>
     </p>
-    <p>
-      To get to first page
-      <router-link to="/first-page"> first page</router-link>
-    </p>
   </div>
 </template>
 
