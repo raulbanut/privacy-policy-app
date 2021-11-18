@@ -28,8 +28,10 @@ export default {
             const provider = new firebase.auth.GoogleAuthProvider();
 
             firebase.auth().signInWithPopup(provider).then((result) => {
-                store.commit("login");
-                store.commit("increaseCounter",1);
+                if (result.user.email == "banut.raul@gmail.com"){
+                    store.commit("login");
+                    store.commit("increaseCounter", 1);
+                }
                 this.$router.replace('home');
             }).catch((err) => {
                 alert("Ooops. " + err.message)

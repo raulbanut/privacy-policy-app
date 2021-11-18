@@ -7,7 +7,7 @@
     </button>
 
     <div class="logat" v-if="logState">
-      <button @click="logout">Logout</button>
+      <button class="logoutButton" @click="logout">Logout</button>
 
       <div v-html="value" style="margin: 30px" />
 

@@ -5,15 +5,15 @@ import router from './router'
 import store from './store'
 // import 'firebase/firestore'
 
-import PrimeVue from 'primevue/config'
-import Dialog from 'primevue/dialog';
+// import PrimeVue from 'primevue/config'
+// import Dialog from 'primevue/dialog';
 
 require('firebase/firestore');
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
-Vue.use(PrimeVue);
-Vue.component('Dialog', Dialog);
+// Vue.use(PrimeVue);
+// Vue.component('Dialog', Dialog);
 
 let app = '';
 
