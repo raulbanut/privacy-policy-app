@@ -1,24 +1,3 @@
-# vue-firebase-tutorial
+# Privacy Policy App
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This app is used to change the text from a page, using VueEditor and Vue. To be able to use the editor, the user should have access. The user is getting access only by using Google Auth. The text is saved in Firebase. 
