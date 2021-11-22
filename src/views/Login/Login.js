@@ -12,6 +12,7 @@ export default {
             password: '',
         };
     },
+
     methods: {
         /**
          * The login function is based on email and password.
@@ -24,7 +25,8 @@ export default {
                 .signInWithEmailAndPassword(this.email, this.password)
                 .then(
                     (user) => {
-                        this.$router.replace('home')
+                        store.commit("logout");
+                        this.$router.replace('home');
                     },
                     (err) => {
                         alert("Ooops. " + err.message);

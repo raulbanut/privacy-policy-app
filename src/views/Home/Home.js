@@ -78,7 +78,6 @@ export default {
 
     },
 
-
     computed: {
         /**
          * This function is used to check if the user have the acces to the editor. 
