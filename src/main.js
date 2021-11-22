@@ -3,17 +3,11 @@ import App from './App.vue'
 import firebase from 'firebase'
 import router from './router'
 import store from './store'
-// import 'firebase/firestore'
-
-// import PrimeVue from 'primevue/config'
-// import Dialog from 'primevue/dialog';
 
 require('firebase/firestore');
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
-// Vue.use(PrimeVue);
-// Vue.component('Dialog', Dialog);
 
 let app = '';
 
@@ -34,7 +28,6 @@ firebase.auth().onAuthStateChanged(() => {
     app = new Vue({
       router,
       firebase,
-      // firestore,
       store,
       render: h => h(App)
     }).$mount('#app');

@@ -10,7 +10,7 @@ export default {
         };
     },
     methods: {
-        /* eslint-disable */
+
         login: function () {
             firebase
                 .auth()
@@ -37,6 +37,5 @@ export default {
                 alert("Ooops. " + err.message)
             });
         }
-        /* eslint-enable */
     },
 };

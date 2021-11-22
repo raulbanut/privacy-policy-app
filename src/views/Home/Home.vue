@@ -18,15 +18,11 @@
       </button>
 
       <div>
-        <!-- <Editor
+        <vue-editor
           class="editor"
           v-model="value"
-          editorStyle="height: 320px"
-          style="margin-top: 0px"
-          placeholder="hello"
-        /> -->
-
-        <vue-editor class="editor" v-model="value" :editorToolbar="customToolbar" ></vue-editor>
+          :editorToolbar="customToolbar"
+        ></vue-editor>
       </div>
 
       <div style="margin-top: 10px">

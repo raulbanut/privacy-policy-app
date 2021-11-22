@@ -4,13 +4,10 @@ import store from "../../store";
 
 import { VueEditor } from 'vue2-quill-editor'
 
-/* eslint-disable */
-
 export default {
     name: "Home",
 
     components: {
-        // Editor,
         VueEditor,
     },
 
@@ -19,14 +16,14 @@ export default {
             statusTemplate: false,
             template: "",
 
-            apply:'',
+            apply: '',
 
             value: "",
             content: "",
 
             customToolbar: [
                 ['bold', 'italic', 'underline'],
-                [{'list':'bullet'}],
+                [{ 'list': 'bullet' }],
                 [{ 'header': [1, 3, false] }],
                 ['link']
             ],
