@@ -21,13 +21,13 @@ let app = '';
  * The setup for the firebase web-app.
  */
 firebase.initializeApp({
-  apiKey: "AIzaSyArkJ9um8FE0GjPx4Tvkh0rorOmK-SqQh0",
-  authDomain: "vue-firebase-tutorial-d3cbc.firebaseapp.com",
-  projectId: "vue-firebase-tutorial-d3cbc",
-  storageBucket: "vue-firebase-tutorial-d3cbc.appspot.com",
-  messagingSenderId: "859480502692",
-  appId: "1:859480502692:web:bbef51cb9668f74e451131",
-  measurementId: "G-QHKS4L8FDR"
+  apiKey: process.env.VUE_APP_API_KEY,
+  authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+  projectId: process.env.VUE_APP_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_MESSAGE_ID_SENDER,
+  appId: process.env.VUE_APP_ID,
+  measurementId: process.env.VUE_APP_MEASUREMENT_ID,
 });
 
 export const db = firebase.firestore();

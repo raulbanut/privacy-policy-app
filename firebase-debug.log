@@ -1,0 +1,85 @@
+[debug] [2021-12-29T09:55:24.681Z] ----------------------------------------------------------------------
+[debug] [2021-12-29T09:55:24.683Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init firestore
+[debug] [2021-12-29T09:55:24.683Z] CLI Version:   9.21.0
+[debug] [2021-12-29T09:55:24.684Z] Platform:      darwin
+[debug] [2021-12-29T09:55:24.684Z] Node Version:  v14.16.0
+[debug] [2021-12-29T09:55:24.687Z] Time:          Wed Dec 29 2021 11:55:24 GMT+0200 (Eastern European Standard Time)
+[debug] [2021-12-29T09:55:24.687Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-29T09:55:24.689Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-12-29T09:55:24.751Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-29T09:55:24.752Z] > authorizing via signed-in user (banut.raul@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/raulbanut/Downloads/Projects/privacy-policy-app
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using vue-firebase-tutorial-d3cbc. 
+[debug] [2021-12-29T09:55:24.756Z] > refreshing access token with scopes: []
+[debug] [2021-12-29T09:55:24.756Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-29T09:55:24.978Z] <<< HTTP RESPONSE 200 {"date":"Wed, 29 Dec 2021 09:55:25 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-29T09:55:25.031Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vue-firebase-tutorial-d3cbc [none]
+[debug] [2021-12-29T09:55:25.324Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-12-29T09:55:25.324Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2021-12-29T09:55:25.451Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vue-firebase-tutorial-d3cbc 200
+[debug] [2021-12-29T09:55:25.451Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vue-firebase-tutorial-d3cbc {"projectId":"vue-firebase-tutorial-d3cbc","projectNumber":"859480502692","displayName":"privacy-policy-app","name":"projects/vue-firebase-tutorial-d3cbc","resources":{"hostingSite":"vue-firebase-tutorial-d3cbc","realtimeDatabaseInstance":"vue-firebase-tutorial-d3cbc-default-rtdb","storageBucket":"vue-firebase-tutorial-d3cbc.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+=== Firestore Setup
+[debug] [2021-12-29T09:55:25.452Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-12-29T09:55:25.452Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-29T09:55:25.596Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 29 Dec 2021 09:55:25 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-29T09:55:25.646Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/vue-firebase-tutorial-d3cbc/services/firestore.googleapis.com  
+ 
+[debug] [2021-12-29T09:55:26.701Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 29 Dec 2021 09:55:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-29T09:55:26.702Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/vue-firebase-tutorial-d3cbc  
+ 
+[debug] [2021-12-29T09:55:27.120Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 29 Dec 2021 09:55:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-29T09:55:27.121Z] database_type: CLOUD_FIRESTORE
+[debug] [2021-12-29T09:55:27.122Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-29T09:55:27.122Z] > authorizing via signed-in user (banut.raul@gmail.com)
+[debug] [2021-12-29T09:55:27.122Z] [iam] checking project privacy-policy-app for permissions ["firebase.projects.get"]
+[debug] [2021-12-29T09:55:27.123Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/privacy-policy-app:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-12-29T09:55:27.915Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 29 Dec 2021 09:55:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=604","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2021-12-29T09:55:36.008Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/vue-firebase-tutorial-d3cbc/releases?pageSize=10&pageToken=  
+ 
+[debug] [2021-12-29T09:55:37.010Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 29 Dec 2021 09:55:36 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-29T09:55:37.012Z] Found ruleset: projects/vue-firebase-tutorial-d3cbc/rulesets/0cca11db-15cd-43e3-bc74-9789912c8377
+[debug] [2021-12-29T09:55:37.012Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/vue-firebase-tutorial-d3cbc/rulesets/0cca11db-15cd-43e3-bc74-9789912c8377  
+ 
+[debug] [2021-12-29T09:55:37.831Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 29 Dec 2021 09:55:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-29T09:55:38.031Z] Error: EISDIR: illegal operation on a directory, open '/Users/raulbanut/Downloads/Projects/privacy-policy-app'
+    at Object.openSync (fs.js:476:3)
+    at Object.writeFileSync (fs.js:1467:35)
+    at Object.createFileSync (/usr/local/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:43:6)
+    at Config.writeProjectFile (/usr/local/lib/node_modules/firebase-tools/lib/config.js:144:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/init/features/firestore/rules.js:50:27
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Object.doSetup [as firestore] (/usr/local/lib/node_modules/firebase-tools/lib/init/features/firestore/index.js:35:5)
+    at async init (/usr/local/lib/node_modules/firebase-tools/lib/init/index.js:19:9)
+[error] 
+[error] Error: An unexpected error has occurred.
